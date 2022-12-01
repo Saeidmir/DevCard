@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard.Models;
 
@@ -36,16 +37,4 @@ public class Article
     }*/
 }
 
-public class Contact
-{
-    [Required(ErrorMessage = "این فیلداجباری است.")]
-    [MinLength(3,ErrorMessage = "حداقل 3 کاراکتر")]
-    [MaxLength(100,ErrorMessage = "حداکثر 100کاراکتر")]
-    public string Name { get; set; }
-    [Required(ErrorMessage = "این فیلداجباری است.")]
-    [EmailAddress]
-    public string Email { get; set; }
-    public string Message { get; set; }
-    public string Service { get; set; }
-}
 
